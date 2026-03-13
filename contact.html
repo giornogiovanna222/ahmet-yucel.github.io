@@ -1,34 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>İletişim</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <title>CV Sayfam</title>
+  <link rel="stylesheet" href="contact.css">
 </head>
 <body>
   <nav>
     <a href="index.html">Ana Sayfa</a> |
     <a href="about.html">Hakkımda</a> |
     <a href="interests.html">İlgi Alanlarım</a> |
-    <a href="contact.html">İletişim</a>
+    <a href="contact.html">İletişim</a> |
     <a href="css.html">Css Sayfası</a>
   </nav>
 
-  <h1>İletişim Bilgilerim</h1>
-  <p>E-posta: <a href="mailto:ahmet@example.com">ahmet@example.com</a></p>
-  <p>Telefon: +90 555 111 22 33</p>
-  <p><a href="https://github.com/ahmet">GitHub Profilim</a></p>
-  <p><a href="https://linkedin.com/in/ahmet">LinkedIn Profilim</a></p>
+  <div class="contact-container">
+    <form action="#" method="post">
+      <label for="name">Ad Soyad:</label>
+      <input type="text" id="name" name="name" placeholder="Adınızı ve Soyadınızı girin" required>
 
-  <h2>Sık Sorulan Sorular</h2>
-  <p><strong>Mesajlara ne kadar sürede dönüş yapıyorsunuz?</strong><br>
-     Genellikle 24 saat içinde e-posta yoluyla dönüş yapıyorum.</p>
+      <label for="email">E-posta:</label>
+      <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
 
-  <p><strong>Projelerde iş birliğine açık mısınız?</strong><br>
-     Evet, özellikle eğitim ve açık kaynak projelerinde iş birliklerine açığım.</p>
+      <label for="subject">Konu:</label>
+      <select id="subject" name="subject" required>
+        <option value="">Lütfen bir konu seçin...</option>
+        <option value="isTeklifi">İş Teklifi</option>
+        <option value="soru">Soru</option>
+        <option value="geriBildirim">Geri Bildirim</option>
+      </select>
 
-  <footer>
-    <p>&copy; 2026 Ahmet | Web Programlama Dersi</p>
-  </footer>
+      <label for="message">Mesaj:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
+
+      <button type="submit">Gönder</button>
+    </form>
+  </div>
 </body>
 </html>
