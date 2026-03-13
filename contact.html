@@ -23,6 +23,23 @@
       <label for="email">E-posta:</label>
       <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
 
+      <label for="password">Başvuru Takip Şifresi:</label>
+      <input type="password" id="password" name="password" placeholder="Şifrenizi girin" required>
+
+      <label>İletişim Tercihi:</label>
+      <input type="radio" id="emailContact" name="contactPref" value="email" checked>
+      <label for="emailContact">Bana e-posta ile ulaşın</label>
+      <input type="radio" id="phoneContact" name="contactPref" value="phone">
+      <label for="phoneContact">Bana telefonla ulaşın</label>
+
+      <label>İlgi Alanları / Yetenekler:</label>
+      <input type="checkbox" id="htmlSkill" name="skills" value="HTML">
+      <label for="htmlSkill">HTML</label>
+      <input type="checkbox" id="cssSkill" name="skills" value="CSS">
+      <label for="cssSkill">CSS</label>
+      <input type="checkbox" id="algoSkill" name="skills" value="Algoritma">
+      <label for="algoSkill">Algoritma</label>
+
       <label for="subject">Konu:</label>
       <select id="subject" name="subject" required>
         <option value="">Lütfen bir konu seçin...</option>
@@ -31,10 +48,14 @@
         <option value="geriBildirim">Geri Bildirim</option>
       </select>
 
+      <label for="fileUpload">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+      <input type="file" id="fileUpload" name="fileUpload">
+
       <label for="message">Mesaj:</label>
       <textarea id="message" name="message" rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
 
       <button type="submit">Gönder</button>
+      <button type="reset">Temizle</button>
     </form>
   </div>
 </body>
