@@ -1,7 +1,6 @@
-
-/* Reset / temel */
+/* Reset ve temel */
 * { box-sizing: border-box; }
-html,body { height: 100%; }
+html, body { height: 100%; }
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -9,24 +8,38 @@ body {
   color: #222;
 }
 
-/* Wrapper: ana kapsayıcı 100vh ve column */
+/* Renk değişkenleri (tutarlı palet) */
+:root{
+  --dark:#222;
+  --dark-2:#1f1f1f;
+  --hero-bg:#f6f7f8;
+  --chip-bg:#f3f5f7;
+  --card-start:#efefef;
+  --card-end:#e6e6e6;
+  --visual-start:#d0d0d0;
+  --visual-end:#c6c6c6;
+  --btn:#007bff;
+  --muted:#666;
+}
+
+/* Wrapper ana yapı 100vh */
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* zorunlu */
+  height: 100vh;
   overflow: hidden;
 }
 
-/* NAVBAR (10vh) */
+/* NAVBAR 10vh */
 .navbar {
   display: flex;
-  justify-content: space-between; /* logo solda, linkler sağda */
+  justify-content: space-between;
   align-items: center;
   height: 10vh;
-  background: #222; /* koyu arka plan örneğe uygun */
+  background: linear-gradient(180deg,var(--dark-2),var(--dark));
   color: #fff;
   padding: 0 28px;
-  gap: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
 }
 
 .logo {
@@ -35,7 +48,6 @@ body {
   font-size: 1.05rem;
 }
 
-/* nav linkler sağda */
 .nav-links {
   display: flex;
   gap: 18px;
@@ -47,24 +59,26 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
+  padding: 6px 8px;
+  border-radius: 4px;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  background: rgba(255,255,255,0.04);
 }
 
-/* chips (küçük etiketler navbar altı) */
+/* chips satırı - navbar altı */
 .chips {
   display: flex;
   gap: 10px;
   padding: 10px 28px;
-  background: #fff;
+  background: #ffffff;
   align-items: center;
-  /* chips yüksekliği küçük, görselde navbar altındaki satır gibi */
+  border-bottom: 1px solid #efefef;
 }
 
 .chip {
-  background: #f1f3f5;
+  background: var(--chip-bg);
   color: #333;
   padding: 6px 10px;
   border-radius: 16px;
@@ -73,16 +87,17 @@ body {
   box-shadow: 0 1px 0 rgba(0,0,0,0.03);
 }
 
-/* HERO (30vh) */
+/* HERO 30vh */
 .hero {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: stretch; /* görsel kutusu yükseklikte esneyecek */
+  align-items: stretch;
   height: 30vh;
   padding: 22px 28px;
-  background: #f6f7f8; /* hafif açık gri */
+  background: var(--hero-bg);
   gap: 18px;
+  border-bottom: 1px solid #ececec;
 }
 
 .hero-text {
@@ -110,24 +125,25 @@ body {
   margin-top: 8px;
   display: flex;
   gap: 10px;
-  color: #666;
+  color: var(--muted);
   font-size: 0.82rem;
 }
 
-/* görsel kutusu (placeholder) */
+/* hero görsel kutusu */
 .hero-image {
   flex: 1;
-  background: #cfcfcf;
+  background: linear-gradient(180deg,var(--visual-start),var(--visual-end));
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #333;
-  font-weight: 600;
+  font-weight: 700;
   min-width: 180px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
 }
 
-/* KARTLAR (30vh) */
+/* KARTLAR 30vh */
 .cards {
   height: 30vh;
   padding: 14px 20px;
@@ -135,6 +151,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border-bottom: 1px solid #efefef;
 }
 
 .section-title {
@@ -156,19 +173,20 @@ body {
   height: calc(100% - 28px);
 }
 
-/* her kartın genişliği örneğe uygun: 3 sütun görünümü */
+/* kart stili */
 .card {
   flex: 1 1 calc(33% - 18px);
-  background: #e9e9e9;
+  background: linear-gradient(180deg,var(--card-start),var(--card-end));
   padding: 12px;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-width: 180px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
 }
 
-/* Flex Grow Bölümü (20vh) */
+/* FLEX GROW 20vh */
 .flex-grow {
   height: 20vh;
   padding: 12px 20px;
@@ -176,6 +194,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border-bottom: 1px solid #efefef;
 }
 
 .small-title {
@@ -185,7 +204,7 @@ body {
   font-weight: 700;
 }
 
-/* grow-row: 3 kutu yan yana, align-items: stretch */
+/* grow-row */
 .grow-row {
   display: flex;
   gap: 12px;
@@ -195,7 +214,7 @@ body {
 
 /* kutular */
 .box {
-  background: #dedede;
+  background: linear-gradient(180deg,var(--card-start),var(--card-end));
   border-radius: 6px;
   padding: 12px;
   display: flex;
@@ -203,6 +222,7 @@ body {
   justify-content: center;
   align-items: center;
   min-width: 80px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
 }
 
 .box-title {
@@ -211,20 +231,20 @@ body {
 }
 
 .box-note {
-  color: #555;
+  color: var(--muted);
   font-size: 0.85rem;
   margin-bottom: 8px;
 }
 
-/* flex-grow değerleri 1-2-1 */
+/* flex-grow 1-2-1 */
 .box1 { flex-grow: 1; }
 .box2 { flex-grow: 2; }
 .box3 { flex-grow: 1; }
 
-/* FOOTER (10vh) */
+/* FOOTER 10vh */
 .footer {
   height: 10vh;
-  background: #222;
+  background: linear-gradient(180deg,var(--dark-2),var(--dark));
   color: #fff;
   display: flex;
   justify-content: center;
@@ -240,7 +260,8 @@ button {
   cursor: pointer;
   font-weight: 700;
   color: #fff;
-  background: #007bff;
+  background: var(--btn);
+  box-shadow: 0 2px 6px rgba(0,123,255,0.12);
 }
 
 button.small {
@@ -249,11 +270,12 @@ button.small {
   font-size: 0.9rem;
 }
 
-/* responsive küçük ekranlarda kartlar alt alta geçsin */
+/* Responsive */
 @media (max-width: 900px) {
   .hero { flex-direction: column; height: auto; }
   .hero-image { min-height: 140px; }
   .cards-grid { gap: 12px; }
   .card { flex: 1 1 100%; }
   .grow-row { flex-direction: column; height: auto; }
+  .chips { overflow-x: auto; padding-bottom: 8px; }
 }
