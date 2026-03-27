@@ -1,0 +1,99 @@
+/* Ana yapı */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* logo solda, linkler sağda */
+  align-items: center;
+  height: 10vh;
+  background: #333;
+  color: white;
+  padding: 0 20px;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 30vh;
+  background: #f0f0f0;
+  padding: 20px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Kartlar */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  height: 30vh;
+  padding: 20px;
+  background: #fafafa;
+}
+
+.card {
+  flex: 1 1 calc(33% - 30px);
+  background: #eaeaea;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Flex Grow */
+.flex-grow {
+  display: flex;
+  align-items: stretch;
+  height: 20vh;
+  gap: 10px;
+  padding: 20px;
+}
+
+.box {
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box1 { flex-grow: 1; }
+.box2 { flex-grow: 2; }
+.box3 { flex-grow: 1; }
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background: #333;
+  color: white;
+}
