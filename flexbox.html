@@ -1,57 +1,131 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Flexbox Uygulama</title>
-  <link rel="stylesheet" href="flexbox.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flexbox Ödev</title>
+  <link rel="stylesheet" href="flexbox.css" />
 </head>
 <body>
   <div class="wrapper">
 
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="logo">LOGO</div>
-      <div class="nav-links">
-        <a href="index.html">Ana Sayfa</a>
-        <a href="about.html">Hakkımda</a>
-        <a href="interests.html">İlgi Alanlarım</a>
-        <a href="contact.html">İletişim</a>
-        <a href="css.html">Css Sayfası</a>
+    <!-- NAVBAR (10vh) -->
+    <header class="navbar">
+      <div class="nav-left">
+        <div class="logo">LOGO</div>
       </div>
-    </nav>
 
-    <!-- Hero -->
+      <div class="nav-right">
+        <nav class="nav-links">
+          <a href="index.html">Ana Sayfa</a>
+          <a href="about.html">Hakkımda</a>
+          <a href="interests.html">Dersler</a>
+          <a href="contact.html">İletişim</a>
+          <a href="css.html">Css Sayfası</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- small chips row under navbar (visual notes like in örnek) -->
+    <div class="chips">
+      <span class="chip">flex layout</span>
+      <span class="chip">justify-content</span>
+      <span class="chip">flex layout</span>
+      <span class="chip">10vh height</span>
+      <span class="chip">100vh height</span>
+      <span class="chip">100vw width</span>
+    </div>
+
+    <!-- HERO (30vh) -->
     <section class="hero">
       <div class="hero-text">
         <h1>Hero Başlık</h1>
-        <p>Açıklama metni</p>
+        <p class="lead">Açıklama metni</p>
         <button class="btn-primary">Buton</button>
+
+        <div class="hero-notes">
+          <div>flex-direction: row</div>
+          <div>height: 30vh</div>
+          <div>align-items: stretch</div>
+        </div>
       </div>
+
       <div class="hero-image">Görsel Kutusu</div>
     </section>
 
-    <!-- Kartlar -->
+    <!-- KARTLAR (30vh) -->
     <section class="cards">
-      <div class="card">Kart Başlığı<br>Kısa Açıklama<br><button class="btn-primary">Buton</button></div>
-      <div class="card">Kart Başlığı<br>Kısa Açıklama<br><button class="btn-primary">Buton</button></div>
-      <div class="card">Kart Başlığı<br>Kısa Açıklama<br><button class="btn-primary">Buton</button></div>
-      <div class="card">Kart Başlığı<br>Kısa Açıklama<br><button class="btn-primary">Buton</button></div>
-      <div class="card">Kart Başlığı<br>Kısa Açıklama<br><button class="btn-primary">Buton</button></div>
-      <div class="card">Kart Başlığı<br>Kısa Açıklama<br><button class="btn-primary">Buton</button></div>
+      <h2 class="section-title">Kartlar Bölümü</h2>
+
+      <div class="cards-grid">
+        <article class="card">
+          <h3>Kart Başlığı</h3>
+          <p>Kısa açıklama</p>
+          <button class="btn-primary small">Buton</button>
+        </article>
+
+        <article class="card">
+          <h3>Kart Başlığı</h3>
+          <p>Kısa açıklama</p>
+          <button class="btn-primary small">Buton</button>
+        </article>
+
+        <article class="card">
+          <h3>Kart Başlığı</h3>
+          <p>Kısa açıklama</p>
+          <button class="btn-primary small">Buton</button>
+        </article>
+
+        <article class="card">
+          <h3>Kart Başlığı</h3>
+          <p>Kısa açıklama</p>
+          <button class="btn-primary small">Buton</button>
+        </article>
+
+        <article class="card">
+          <h3>Kart Başlığı</h3>
+          <p>Kısa açıklama</p>
+          <button class="btn-primary small">Buton</button>
+        </article>
+
+        <article class="card">
+          <h3>Kart Başlığı</h3>
+          <p>Kısa açıklama</p>
+          <button class="btn-primary small">Buton</button>
+        </article>
+      </div>
     </section>
 
-    <!-- Flex Grow -->
+    <!-- FLEX GROW (20vh) -->
     <section class="flex-grow">
-      <div class="box box1">1 Kutu<br><button class="btn-primary">Buton</button></div>
-      <div class="box box2">2 Kutu<br><button class="btn-primary">Buton</button></div>
-      <div class="box box3">3 Kutu<br><button class="btn-primary">Buton</button></div>
+      <h2 class="section-title small-title">Flex Grow Uygulama</h2>
+
+      <div class="grow-row">
+        <div class="box box1">
+          <div class="box-title">1 Kutu</div>
+          <div class="box-note">flex-grow: 1;</div>
+          <button class="btn-primary small">Buton</button>
+        </div>
+
+        <div class="box box2">
+          <div class="box-title">2 Kutu</div>
+          <div class="box-note">flex-grow: 2;</div>
+          <button class="btn-primary small">Buton</button>
+        </div>
+
+        <div class="box box3">
+          <div class="box-title">3 Kutu</div>
+          <div class="box-note">flex-grow: 1;</div>
+          <button class="btn-primary small">Buton</button>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER (10vh) -->
     <footer class="footer">
       © 2026 - Temel Flexbox Örneği
     </footer>
-
   </div>
 </body>
 </html>
